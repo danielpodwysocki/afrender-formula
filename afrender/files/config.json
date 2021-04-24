@@ -1,0 +1,4 @@
+{"cgru_config":{
+        "af_servername":"{{ pillar['af_servername'] }}"
+}}
+

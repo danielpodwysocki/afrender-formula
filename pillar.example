@@ -1,0 +1,2 @@
+#The hostname of your Afanasy server, it must have port 51000 exposed
+af_servername: afanasy.example.com

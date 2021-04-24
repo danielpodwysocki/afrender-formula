@@ -1,0 +1,3 @@
+base:
+  '*':
+    - afrender-formula/minion
