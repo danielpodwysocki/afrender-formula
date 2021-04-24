@@ -3,7 +3,7 @@ Install dependencies:
     - pkgs:
       - libpython3.7
       - libpq5
-      - xorg #will be installed by default, but is needed in Vagrant or blender binary will error out
+      - xorg #will be installed by default, but it is needed for the Vagrant image or the blender binary will error out
 
 #download the CGRU packages
 /tmp/cgru.tar.xz:
@@ -55,6 +55,7 @@ afrender:
 /usr/local/blender-installation:
   archive.extracted:
     - source: /tmp/blender.tar.xz
+    - options: "--strip-components=1"
     - enforce_toplevel: False
 
 /opt/cgru/software_setup/setup_blender.sh:
@@ -63,4 +64,6 @@ afrender:
     - user: root
     - group: root
     - mode: 0755
-    
+    - listen_in:
+      - service: afrender
+
