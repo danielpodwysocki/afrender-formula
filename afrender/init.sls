@@ -3,6 +3,7 @@ Install dependencies:
     - pkgs:
       - libpython3.7
       - libpq5
+      - xorg #will be installed by default, but is needed in Vagrant or blender binary will error out
 
 #download the CGRU packages
 /tmp/cgru.tar.xz:
@@ -40,3 +41,26 @@ afrender:
     - template: jinja
     - listen_in:
       - service: afrender
+
+
+### DEPLOY BLENDER ###
+/tmp/blender.tar.xz:
+  file.managed:
+    - source: https://ftp.nluug.nl/pub/graphics/blender/release/Blender2.92/blender-2.92.0-linux64.tar.xz
+    - mode: 0700
+    - user: root
+    - group: root
+    - skip_verify: True #this is only for the hash of the file, the SSL cert should still be checked
+
+/usr/local/blender-installation:
+  archive.extracted:
+    - source: /tmp/blender.tar.xz
+    - enforce_toplevel: False
+
+/opt/cgru/software_setup/setup_blender.sh:
+  file.managed:
+    - source: salt://{{ slspath }}/files/setup_blender.sh
+    - user: root
+    - group: root
+    - mode: 0755
+    
