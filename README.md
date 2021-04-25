@@ -10,7 +10,7 @@ The AMI for ec2 instances can be built using Packer, the region defaults to eu-c
 packer build -var 'region=us-east-1' -var 'buster_ami=ami-07d02ee1eeb0c996c' aws.pkr.hcl
 ```
 
-Note that base AMIs are stored per-region, so if you change the region, you need to pass the relevant AMI ID as well. 
+Note that base AMIs are stored per-region, so if you change the region, you need to pass the relevant base AMI ID for Debian as well. 
 
 
 This formula is made for Debian 10.
