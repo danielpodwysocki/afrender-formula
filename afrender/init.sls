@@ -23,9 +23,9 @@ Install dependencies:
 Install CGRU packages:
   pkg.installed:
     - sources:
-      - cgru-common: /tmp/cgru/cgru-common.3.2.0_debian10_amd64.deb
-      - afanasy-common: /tmp/cgru/afanasy-common.3.2.0_debian10_amd64.deb
-      - afanasy-render: /tmp/cgru/afanasy-render.3.2.0_debian10_amd64.deb
+      - cgru-common: /tmp/cgru/cgru-common.3.2.1_debian10_amd64.deb
+      - afanasy-common: /tmp/cgru/afanasy-common.3.2.1_debian10_amd64.deb
+      - afanasy-render: /tmp/cgru/afanasy-render.3.2.1_debian10_amd64.deb
 
 
 afrender:
