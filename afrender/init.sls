@@ -8,7 +8,7 @@ Install dependencies:
 #download the CGRU packages
 /tmp/cgru.tar.xz:
   file.managed:
-    - source: https://sourceforge.net/projects/cgru/files/3.2.0/cgru.3.2.0.debian10_amd64.tar.gz/download
+    - source: https://kumisystems.dl.sourceforge.net/project/cgru/3.2.1/cgru.3.2.1.debian10_amd64.tar.gz
     - mode: 0700
     - user: root
     - group: root
